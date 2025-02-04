@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/BetDecision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/BlackJack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/CardHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Dealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/HandUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/ICardHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/IDealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/IPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Player.java" afterDir="false" />
+    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +37,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.blackjack-game [clean].executor": "Run",
+    "Maven.blackjack-game [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
@@ -109,12 +101,25 @@
       <updated>1738685235793</updated>
       <workItem from="1738685236963" duration="677000" />
       <workItem from="1738685916123" duration="9000" />
-      <workItem from="1738685936278" duration="5754000" />
+      <workItem from="1738685936278" duration="5903000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1738691740876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738691740876</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
