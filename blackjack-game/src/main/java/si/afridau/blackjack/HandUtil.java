@@ -14,7 +14,6 @@ public class HandUtil {
         for (Card c : cards) {
             if (c == Card.ACE) {
                 maxAceValApplied = true;
-                continue;
             }
 
             value += c.value;
