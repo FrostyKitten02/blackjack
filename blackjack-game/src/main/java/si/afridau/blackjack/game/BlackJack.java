@@ -8,9 +8,9 @@ import si.afridau.blackjack.participant.IPlayer;
 import java.util.UUID;
 
 public class BlackJack {
-    private IPlayer player;
-    private IDealer dealer;
-    private UUID gameId;
+    private final IPlayer player;
+    private final IDealer dealer;
+    private final UUID gameId;
 
     private GameState state = GameState.NOT_READY;
 
@@ -20,12 +20,10 @@ public class BlackJack {
         this.gameId = UUID.randomUUID();
     }
 
-
     public void start() {
         dealer.shuffle();
         state = GameState.STARTED;
     }
-
 
     public void playRound() {
         if (state == GameState.NOT_READY) {
@@ -79,7 +77,6 @@ public class BlackJack {
 
         state = GameState.STARTED;
     }
-
 
     //RETURNS player's hand value
     public int[] cardHolderMove(ICardHolder player, BetDecision decision) {

@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="gitignore update">
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/BetDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/core/BetDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/core/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/CardHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/CardHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/HandUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/HandUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/ICardHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/ICardHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/IDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/IPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Player.java" afterDir="false" />
+    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +91,7 @@
       <workItem from="1738685236963" duration="677000" />
       <workItem from="1738685916123" duration="9000" />
       <workItem from="1738685936278" duration="5931000" />
-      <workItem from="1738701121480" duration="426000" />
+      <workItem from="1738701121480" duration="480000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -121,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738691854326</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1738701570700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738701570700</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="gitignore update" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore update" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
