@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="refactor">
+    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="hand calculation fix">
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/Hand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/PlayerResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/RoundResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/CardHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/CardHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/ICardHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/ICardHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,28 +43,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.blackjack-game [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.blackjack-game [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;jdk.selected.JDK&quot;: &quot;corretto-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15261959&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.36939013&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "Maven.blackjack-game [clean].executor": "Run",
+    "Maven.blackjack-game [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "jdk.selected.JDK": "corretto-21",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15261959",
+    "project.structure.side.proportion": "0.36939013",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="si.afridau.blackjack.Main" />
@@ -91,7 +101,7 @@
       <workItem from="1738685236963" duration="677000" />
       <workItem from="1738685916123" duration="9000" />
       <workItem from="1738685936278" duration="5931000" />
-      <workItem from="1738701121480" duration="480000" />
+      <workItem from="1738701121480" duration="3357000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -117,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738701570700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1738701650976</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738701650976</updated>
+    </task>
+    <task id="LOCAL-00005" summary="hand calculation fix">
+      <option name="closed" value="true" />
+      <created>1738702482522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738702482522</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +153,18 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="gitignore update" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="hand calculation fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="hand calculation fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

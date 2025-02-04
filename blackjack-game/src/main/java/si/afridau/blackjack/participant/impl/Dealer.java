@@ -5,6 +5,7 @@ import si.afridau.blackjack.core.Card;
 import si.afridau.blackjack.participant.CardHolder;
 import si.afridau.blackjack.participant.ICardHolder;
 import si.afridau.blackjack.participant.IDealer;
+import si.afridau.blackjack.participant.IPlayer;
 
 import java.util.Random;
 
@@ -13,6 +14,7 @@ public class Dealer extends CardHolder implements IDealer {
     private int currentCardIndex = 0;
 
     public Dealer(int numberOfDecks) {
+        super();
         final int deckLen = Card.deck.length;
         cards = new Card[deckLen * numberOfDecks];
 

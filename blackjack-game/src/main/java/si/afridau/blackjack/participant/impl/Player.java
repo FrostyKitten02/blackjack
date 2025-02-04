@@ -6,6 +6,11 @@ import si.afridau.blackjack.participant.IPlayer;
 
 public class Player extends CardHolder implements IPlayer {
     private float balance = 0;
+    private float roundBetAmount = 0;
+
+    public Player() {
+        super();
+    }
 
     @Override
     public float geBalance() {
@@ -20,8 +25,19 @@ public class Player extends CardHolder implements IPlayer {
 
     //TODO should dealer keep track of balance??
     @Override
-    public float betAmount() {
-        balance -= 10;
-        return 10;
+    public float getRoundBetAmount() {
+        return this.roundBetAmount;
+    }
+
+    @Override
+    public void placeRoundBetAmount() {
+        //flat bet for now
+        roundBetAmount = 10;
+        balance -= roundBetAmount;
+    }
+
+    @Override
+    public void rewardPlayer(float amount) {
+       balance += amount;
     }
 }
