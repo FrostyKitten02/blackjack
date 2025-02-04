@@ -1,21 +1,45 @@
-package si.afridau.blackjack;
+package si.afridau.blackjack.game;
+
+import si.afridau.blackjack.core.BetDecision;
+import si.afridau.blackjack.participant.ICardHolder;
+import si.afridau.blackjack.participant.IDealer;
+import si.afridau.blackjack.participant.IPlayer;
+
+import java.util.UUID;
 
 public class BlackJack {
     private IPlayer player;
     private IDealer dealer;
+    private UUID gameId;
+
+    private GameState state = GameState.NOT_READY;
 
     public BlackJack(IPlayer player, IDealer dealer) {
         this.player = player;
         this.dealer = dealer;
+        this.gameId = UUID.randomUUID();
     }
 
-    public void playRound() {
-        System.out.println("Game started");
-        dealer.shuffle();
 
+    public void start() {
+        dealer.shuffle();
+        state = GameState.STARTED;
+    }
+
+
+    public void playRound() {
+        if (state == GameState.NOT_READY) {
+            throw new IllegalStateException("Game not started yet");
+        }
+
+        if (state == GameState.ROUND_IN_PROGRESS) {
+            throw new IllegalStateException("Game already in progress");
+        }
+
+        state = GameState.ROUND_IN_PROGRESS;
+        UUID roundId = UUID.randomUUID();
         //TODO: implement reward system!!
         float bet = player.betAmount();
-        System.out.println("Player bet: " + bet);
         //first hand
         dealer.deal(player);
         dealer.deal(dealer);
@@ -52,6 +76,8 @@ public class BlackJack {
 
         player.discardCards();
         dealer.discardCards();
+
+        state = GameState.STARTED;
     }
 
 

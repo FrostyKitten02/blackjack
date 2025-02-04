@@ -1,4 +1,8 @@
-package si.afridau.blackjack;
+package si.afridau.blackjack.participant.impl;
+
+import si.afridau.blackjack.core.BetDecision;
+import si.afridau.blackjack.participant.CardHolder;
+import si.afridau.blackjack.participant.IPlayer;
 
 public class Player extends CardHolder implements IPlayer {
     private float balance = 0;
@@ -11,7 +15,6 @@ public class Player extends CardHolder implements IPlayer {
     @Override
     public BetDecision decide() {
         //TODO implement!!
-        System.out.println("Player decides to stand");
         return BetDecision.STAND;
     }
 

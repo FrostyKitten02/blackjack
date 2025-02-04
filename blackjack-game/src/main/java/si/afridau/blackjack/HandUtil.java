@@ -1,5 +1,7 @@
 package si.afridau.blackjack;
 
+import si.afridau.blackjack.core.Card;
+
 import java.util.List;
 
 public class HandUtil {

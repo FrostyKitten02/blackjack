@@ -1,4 +1,4 @@
-package si.afridau.blackjack;
+package si.afridau.blackjack.core;
 
 public enum Card {
     KING(10),

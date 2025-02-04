@@ -1,4 +1,7 @@
-package si.afridau.blackjack;
+package si.afridau.blackjack.participant;
+
+import si.afridau.blackjack.core.BetDecision;
+import si.afridau.blackjack.core.Card;
 
 import java.util.List;
 
