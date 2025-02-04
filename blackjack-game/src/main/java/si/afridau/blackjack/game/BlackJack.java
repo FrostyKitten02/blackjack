@@ -2,6 +2,7 @@ package si.afridau.blackjack.game;
 
 import si.afridau.blackjack.core.BetDecision;
 import si.afridau.blackjack.participant.ICardHolder;
+import si.afridau.blackjack.participant.ICardHolderInfo;
 import si.afridau.blackjack.participant.IDealer;
 import si.afridau.blackjack.participant.IPlayer;
 
@@ -12,13 +13,14 @@ public class BlackJack {
     private final IPlayer player;
     private final IDealer dealer;
     private final UUID gameId;
-
     private GameState state = GameState.NOT_READY;
 
     public BlackJack(IPlayer player, IDealer dealer) {
         this.player = player;
         this.dealer = dealer;
         this.gameId = UUID.randomUUID();
+
+        dealer.addCardListener(player.getStrategy());
     }
 
     public void start() {
@@ -63,9 +65,9 @@ public class BlackJack {
         int[] dealerValue = cardHolderTurn(dealer, dealer.decide());
         if (dealerValue[0] > 21) {
             System.out.println("Dealer busted with value: " + dealerValue[0] + " vs player value: " + playerValue[0]);
+            player.rewardPlayer(player.getRoundBetAmount() * 2);//TODO: store reward coefficients in conf class
             RoundResult rr = new RoundResult(List.of(player), dealer, roundId);
             //bj not possible here??
-            player.rewardPlayer(player.getRoundBetAmount() * 2);//TODO: store reward coefficients in conf class
             dealer.discardCards();
             player.discardCards();
 

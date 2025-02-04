@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="hand calculation fix">
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/Hand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/PlayerResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/RoundResult.java" afterDir="false" />
+    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="game results">
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/DeckUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/IBlackJackInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/listeners/ICardListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/ICardHolderInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/strategy/IStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/strategy/SimpleStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/game/BlackJack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/CardHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/CardHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/ICardHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/ICardHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IDealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/IPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Player.java" afterDir="false" />
@@ -25,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -101,7 +104,7 @@
       <workItem from="1738685236963" duration="677000" />
       <workItem from="1738685916123" duration="9000" />
       <workItem from="1738685936278" duration="5931000" />
-      <workItem from="1738701121480" duration="3357000" />
+      <workItem from="1738701121480" duration="6266000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -143,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738702482522</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="game results">
+      <option name="closed" value="true" />
+      <created>1738704507731</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738704507731</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,14 +165,15 @@
     <MESSAGE value="gitignore update" />
     <MESSAGE value="refactor" />
     <MESSAGE value="hand calculation fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="hand calculation fix" />
+    <MESSAGE value="game results" />
+    <option name="LAST_COMMIT_MESSAGE" value="game results" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java</url>
-          <line>25</line>
+          <line>43</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

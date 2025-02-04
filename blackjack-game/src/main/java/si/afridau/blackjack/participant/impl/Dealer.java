@@ -1,23 +1,27 @@
 package si.afridau.blackjack.participant.impl;
 
+import si.afridau.blackjack.DeckUtil;
 import si.afridau.blackjack.core.BetDecision;
 import si.afridau.blackjack.core.Card;
+import si.afridau.blackjack.game.listeners.ICardListener;
 import si.afridau.blackjack.participant.CardHolder;
 import si.afridau.blackjack.participant.ICardHolder;
 import si.afridau.blackjack.participant.IDealer;
-import si.afridau.blackjack.participant.IPlayer;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Dealer extends CardHolder implements IDealer {
     private final Card[] cards;
     private int currentCardIndex = 0;
+    private final List<ICardListener> cardListeners = new ArrayList<>();
 
     public Dealer(int numberOfDecks) {
         super();
-        final int deckLen = Card.deck.length;
-        cards = new Card[deckLen * numberOfDecks];
+        cards = new Card[DeckUtil.getTotalCards(numberOfDecks)];
 
+        final int deckLen = DeckUtil.getDeckSize();
         int destPos = 0;
         for (int i = 0; i < numberOfDecks; i++) {
             System.arraycopy(Card.deck, 0, cards, destPos, deckLen);
@@ -25,22 +29,27 @@ public class Dealer extends CardHolder implements IDealer {
         }
     }
 
+    @Override
     public void shuffle() {
         Random random = new Random();
-        for (int i = 0; i < cards.length; i++) {
+        for (int i = 0; i < cards.length * 2; i++) {
             int j = random.nextInt(cards.length);
+            int k = random.nextInt(cards.length);
 
-            Card temp = cards[i];
-            cards[i] = cards[j];
+            Card temp = cards[k];
+            cards[k] = cards[j];
             cards[j] = temp;
         }
     }
 
+    //TODO we don't need to return card?
+    @Override
     public Card deal(ICardHolder recipient) {
         //TODO maybe set dealt card to -1, just in case?
         Card card = cards[currentCardIndex];
         recipient.receiveCard(card);
         currentCardIndex++;
+        notifyCardListeners(card);
         return card;
     }
 
@@ -51,5 +60,16 @@ public class Dealer extends CardHolder implements IDealer {
         }
 
         return BetDecision.STAND;
+    }
+
+    @Override
+    public void addCardListener(ICardListener listener) {
+        cardListeners.add(listener);
+    }
+
+    private void notifyCardListeners(Card card) {
+        for (ICardListener listener : cardListeners) {
+            listener.cardDealt(card);
+        }
     }
 }
