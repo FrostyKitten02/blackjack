@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="added player strategy">
+    <list default="true" id="d847fdaa-330a-4e6a-bb13-bab08b303a44" name="Changes" comment="compiled round results">
       <change afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/strategy/AlmostPerfectStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/strategy/SimpleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/strategy/SimpleStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/participant/impl/Dealer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <workItem from="1738685916123" duration="9000" />
       <workItem from="1738685936278" duration="5931000" />
       <workItem from="1738701121480" duration="6548000" />
-      <workItem from="1738711098576" duration="1899000" />
+      <workItem from="1738711098576" duration="2213000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -163,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738707675335</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="compiled round results">
+      <option name="closed" value="true" />
+      <created>1738713072542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738713072542</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,17 +184,7 @@
     <MESSAGE value="hand calculation fix" />
     <MESSAGE value="game results" />
     <MESSAGE value="added player strategy" />
-    <option name="LAST_COMMIT_MESSAGE" value="added player strategy" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/blackjack-game/src/main/java/si/afridau/blackjack/Main.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="compiled round results" />
+    <option name="LAST_COMMIT_MESSAGE" value="compiled round results" />
   </component>
 </project>

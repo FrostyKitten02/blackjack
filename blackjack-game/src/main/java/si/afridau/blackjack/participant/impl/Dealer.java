@@ -15,12 +15,17 @@ import java.util.Random;
 public class Dealer extends CardHolder implements IDealer {
     private final Card[] cards;
     private int currentCardIndex = 0;
+    private int numberOfDecks;
     private final List<ICardListener> cardListeners = new ArrayList<>();
 
     public Dealer(int numberOfDecks) {
         super();
-        cards = new Card[DeckUtil.getTotalCards(numberOfDecks)];
+        this.numberOfDecks = numberOfDecks;
+        this.cards = new Card[DeckUtil.getTotalCards(numberOfDecks)];
+        setCards();
+    }
 
+    private void setCards() {
         final int deckLen = DeckUtil.getDeckSize();
         int destPos = 0;
         for (int i = 0; i < numberOfDecks; i++) {
@@ -45,6 +50,12 @@ public class Dealer extends CardHolder implements IDealer {
     //TODO we don't need to return card?
     @Override
     public Card deal(ICardHolder recipient) {
+        if (currentCardIndex >= cards.length - 1) {
+            setCards();
+            shuffle();
+            currentCardIndex = 0;
+        }
+
         //TODO maybe set dealt card to -1, just in case?
         Card card = cards[currentCardIndex];
         recipient.receiveCard(card);
